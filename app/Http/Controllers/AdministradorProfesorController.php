@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Estudiante;
+use App\Models\Profesor;
 class AdministradorProfesorController extends Controller
 {
     public function index(){
-        /* $estudiantes = Estudiante::all(); */
-        return view('administradorprofesor.AdministradorProfesor'/* ,compact('estudiantes') */);
+        $profesores = Profesor::all();
+        return view('administradorprofesor.AdministradorProfesor',compact('profesores'));
     
     }
-    /* public function store(Request $request){
-        $estudiante = new Estudiante();
-        $estudiante->rut = $request->rut;
-        $estudiante->nombre = $request->nombre;
-        $estudiante->apellido = $request->apellido;
-        $estudiante->email = $request->email;
+    public function store(Request $request){
+        $profesor = new Profesor();
+        $profesor->rut = $request->rut;
+        $profesor->nombre = $request->nombre;
+        $profesor->apellido = $request->apellido;
+        $Profesor->email = $request->email;
 
-        $estudiante->save();
-        return redirect()->route('administrador.AdministradorProfesor'); */
-    /* } */
+        $profesor->save();
+        return redirect()->route('administrador.AdministradorProfesor'); 
+    }
 }

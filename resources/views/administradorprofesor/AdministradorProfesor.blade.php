@@ -47,14 +47,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($estudiantes as $var=>$estudiantes)
+                    @foreach ($profesores as $var=>$profesores)
                     <tr>
-                        <td>{{$estudiantes->rut}}</td>
-                        <td>{{$estudiantes->nombre}}</td>
-                        <td>{{$estudiantes->apellido}}</td>
-                        <td>{{$estudiantes->email}}</td>
+                        <td>{{$profesores->rut}}</td>
+                        <td>{{$profesores->nombre}}</td>
+                        <td>{{$profesores->apellido}}</td>
+                        <td>{{$profesores->email}}</td>
                     </tr>
-                  @endforeach --}}
+                    @endforeach
                 </tbody>
               </table>
         </div>
