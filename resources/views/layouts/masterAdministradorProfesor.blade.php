@@ -18,13 +18,13 @@
       <div class="collapse navbar-collapse justify-content-sm-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('administrador.indexAdministrador')}}">Estudiantes</a>
+            <a class="nav-link" aria-current="page" href="#">Estudiantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profesores</a>
+            <a class="nav-link" href="{{route('administrador.AdministradorProfesor')}}">Profesores</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">propuestas</a>
+            <a class="nav-link" href="#">Propuestas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('inicio.index')}}">Cerrar sesión</a>
@@ -34,7 +34,7 @@
     </div>
   </nav>
       
-      @yield('nav-administrador')
+      @yield('nav-administradorProfesor')
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

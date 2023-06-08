@@ -1,9 +1,9 @@
-@extends('layouts.masterAdministradorProfesor')
-@section('nav-administradorProfesor')
+@extends('layouts.masterAdministrador')
+@section('nav-administrador')
 <div class="container-fluid">
     <div class="row">
         <div class="col col-12 col-sm-4 p-3">
-            <h4 class="fw-normal text-center mb-3">Ingrese Estudiante</h4>
+            <h4 class="fw-normal text-center mb-3">Ingrese Profesores</h4>
             <div class="card p-3">
                 <form method="POST" action="{{route('administrador.store')}}">
                     @csrf
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="col col-12 col-sm-8 p-3">
-            <h4 class="fw-normal text-center mb-3">Estudiantes Registrados</h4>
+            <h4 class="fw-normal text-center mb-3">Profesores Registrados</h4>
             <table class="table">
                 <thead>
                   <tr>
@@ -47,14 +47,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($estudiantes as $var=>$estudiantes)
+                    {{-- @foreach ($estudiantes as $var=>$estudiantes)
                     <tr>
                         <td>{{$estudiantes->rut}}</td>
                         <td>{{$estudiantes->nombre}}</td>
                         <td>{{$estudiantes->apellido}}</td>
                         <td>{{$estudiantes->email}}</td>
                     </tr>
-                  @endforeach
+                  @endforeach --}}
                 </tbody>
               </table>
         </div>

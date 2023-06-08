@@ -18,7 +18,7 @@
                 <a class="btn btn-secondary btn-lg flex-fill" href="{{route('estudiante.indexEstudiante')}}" role="button">Estudiante</a>
             </div>
             <div class="col-12 col-sm-4 mb-3 d-flex ">
-                <a class="btn btn-secondary btn-lg flex-fill" href="#" role="button">Profesor</a>
+                <a class="btn btn-secondary btn-lg flex-fill" href="{{route('profesor.indexProfesor')}}" role="button">Profesor</a>
             </div>
             <div class="col-12 col-sm-4 mb-3 d-flex">
                 <a class="btn btn-secondary btn-lg flex-fill" href="{{route('administrador.indexAdministrador')}}" role="button">Administrador</a>
