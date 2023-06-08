@@ -27,3 +27,5 @@ Route::post('/administrador',[AdministradorController::class,'store'])->name('ad
 Route::get('/administrador/administradorprofesor',[AdministradorProfesorController::class,'index'])->name('administrador.AdministradorProfesor');
 
 Route::get('/profesor',[ProfesorController::class,'index'])->name('profesor.indexProfesor');
+Route::post('/profesor',[ProfesorController::class,'store'])->name('profesor.store');
+Route::post('/administradorprofesor',[AdministradorProfesorController::class,'store'])->name('administradorprofesor.store');

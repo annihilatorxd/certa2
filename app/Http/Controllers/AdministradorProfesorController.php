@@ -16,7 +16,7 @@ class AdministradorProfesorController extends Controller
         $profesor->rut = $request->rut;
         $profesor->nombre = $request->nombre;
         $profesor->apellido = $request->apellido;
-        $Profesor->email = $request->email;
+        
 
         $profesor->save();
         return redirect()->route('administrador.AdministradorProfesor'); 
