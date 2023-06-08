@@ -9,9 +9,10 @@
         <div class="form-group">
             <label for="profesor">Selecciona un profesor:</label>
             <select class="form-control" id="profesor" name="profesor">
-                <option value="profesor1">Profesor 1</option>
-                <option value="profesor2">Profesor 2</option>
-                <option value="profesor3">Profesor 3</option>
+                <option selected>Rut - Nombre</option>
+                @foreach ($profesores as $profesores)
+                    <option value="{{$profesores->rut}}">{{$profesores->rut.' - '.$profesores->nombre.' '.$profesores->apellido}}</option>
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-dark mt-2">Ver Propuestas</button>
