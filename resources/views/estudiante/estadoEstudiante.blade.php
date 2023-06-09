@@ -1,38 +1,43 @@
 @extends('layouts.masterEstudiante')
 @section('nav-estudiante')
-<head>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="container mt-5">
-      <h2>Seleccionar Estudiante</h2>
-      <div class="form-group">
-        <select class="form-control" id="selectEstudiante">
-          <option>Estudiante 1</option>
+<div class="container">
+    <h1 class="mt-4">Pagina de Proyectos</h1>
+    <div class="row mt-4">
+      <div class="col-lg-4">
+        <label for="students-select" class="form-label">Seleccionar estudiante:</label>
+        <select id="students-select" class="form-select">
           
-          <!-- Agrega más opciones de estudiantes según sea necesario -->
+          <option selected>Rut - Nombre</option>
+              @foreach ($estudiantes as $estudiantes)
+                  <option value="{{$estudiantes->rut}}">{{$estudiantes->rut.' - '.$estudiantes->nombre.' '.$estudiantes->apellido}}</option>
+              @endforeach
+          
+          
         </select>
       </div>
-  
-      <h2>Comentarios del Profesor</h2>
-      <div class="card mt-4">
-        <div class="card-header">
-          <h5>Comentario 1</h5>
-        </div>
-        <div class="card-body">
-          <p>Este es el comentario del profesor sobre tu proyecto.</p>
-        </div>
-      </div>
-      
-  
-      <h2>Estado del Proyecto</h2>
-      <div class="alert alert-success mt-4" role="alert">
-        Aceptado: Tu proyecto ha sido aceptado.
-      </div>
-  
-      <!-- Agrega más tarjetas de comentarios o estados del proyecto según sea necesario -->
-  
     </div>
-  </body>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Proyecto</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($propuestas as $var=>$propuestas)
+                    <tr>
+                        <td>{{$propuestas->documento}}</td>
+                        <td>{{$propuestas->fecha}}</td>
+                        <td>{{$propuestas->id}}</td>
+                        
+                    </tr>
+         @endforeach
+          <td><a href="#" class="btn btn-dark">Ver comentarios</a></td>
+        
+        
+      </tbody>
+    </table>
+  </div>
 @endsection

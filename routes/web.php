@@ -20,6 +20,7 @@ use App\Http\Controllers\AdministradorProfesorController;
 Route::get('/',[InicioController::class,'index'])->name('inicio.index');
 
 Route::get('/estudiante',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
+Route::get('/estudiante/estado',[EstudianteController::class,'estado'])->name('estudiante.estado');
 Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.store');
 
 Route::get('/administrador',[AdministradorController::class,'index'])->name('administrador.indexAdministrador');
@@ -27,5 +28,6 @@ Route::post('/administrador',[AdministradorController::class,'store'])->name('ad
 Route::get('/administrador/administradorprofesor',[AdministradorProfesorController::class,'index'])->name('administrador.AdministradorProfesor');
 
 Route::get('/profesor',[ProfesorController::class,'index'])->name('profesor.indexProfesor');
-Route::post('/profesor',[ProfesorController::class,'store'])->name('profesor.store');
+Route::get('/profesorComentario',[ProfesorController::class,'comentario'])->name('profesor.comentario');
+
 Route::post('/administradorprofesor',[AdministradorProfesorController::class,'store'])->name('administradorprofesor.store');

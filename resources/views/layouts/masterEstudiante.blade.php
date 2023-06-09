@@ -21,7 +21,7 @@
             <a class="nav-link" aria-current="page" href="#">Propuesta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Estado</a>
+            <a class="nav-link" href="{{route('estudiante.estado')}}">Estado</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('inicio.index')}}">Cerrar sesión</a>
