@@ -24,7 +24,7 @@
             <a class="nav-link" href="{{route('administrador.indexProfesor')}}">Profesores</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">propuestas</a>
+            <a class="nav-link" href="{{route('administrador.propuesta')}}">propuestas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('inicio.index')}}">Cerrar sesión</a>

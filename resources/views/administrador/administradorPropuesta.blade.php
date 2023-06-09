@@ -1,11 +1,6 @@
-@extends('layouts.masterProfesor')
-
-@section('nav-profesor')
-
-<div class="container">
-    
-    
-    <h2>Propuestas de Estudiantes</h2>
+@extends('layouts.masterAdministrador')
+@section('nav-administrador')
+<div class="container-fluid">
     <table class="table">
         <thead>
             <tr>
@@ -30,16 +25,22 @@
                         @elseif($propuestas->estado==3)<td>Aceptado</td>
                         @endif
                     <td>
-                        <a class="btn btn-primary" href="{{route('profesor.comentario',$propuestas)}}">ver</a>
+                        <form action="{{route('administrador.propuestaEstado')}}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <select class="form-select" name="estado" id="estado">
+                                <option selected>Open this select menu</option>
+                                <option value=0>One</option>
+                                <option value=1>Two</option>
+                                <option value=2>Three</option>
+                                <option value=3>Three</option>
+                            </select>
+                            <button type="submit" class="btn" >0</button></button>
+                        </form>
+
                     </td>
                 </tr>
             @endforeach
         </tbody>
-    </table>
-
-
-
 </div>
-
-
 @endsection

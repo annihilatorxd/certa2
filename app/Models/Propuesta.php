@@ -9,4 +9,11 @@ class Propuesta extends Model
 {
     use HasFactory;
     protected $table = 'propuestas';
+
+    public function estudiante(){
+        return $this->belongsTo('App\Models\Estudiante');
+    }
+    public function profesor_propuestas(){
+        return $this->hasMany('App\Models\Profesor_propuesta');
+    }
 }

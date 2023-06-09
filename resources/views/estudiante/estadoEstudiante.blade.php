@@ -30,11 +30,15 @@
                     <tr>
                         <td>{{$propuestas->documento}}</td>
                         <td>{{$propuestas->fecha}}</td>
-                        <td>{{$propuestas->id}}</td>
-                        
+                        @if($propuestas->estado==0)<td>Esperando Resultado</td>
+                        @elseif($propuestas->estado==1)<td>Modificar Propuesta</td>
+                        @elseif($propuestas->estado==2)<td>Rechazado</td>
+                        @elseif($propuestas->estado==3)<td>Aceptado</td>
+                        @endif
+                        <td><a href="#" class="btn btn-dark">Ver comentarios</a></td>
                     </tr>
          @endforeach
-          <td><a href="#" class="btn btn-dark">Ver comentarios</a></td>
+         
         
         
       </tbody>

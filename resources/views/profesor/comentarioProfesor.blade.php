@@ -11,19 +11,18 @@
                     <div class="container">
                         <div class="row g-3">
                             <div class="col-12">
-                                <label for="rut" class="form-label">Rut:</label>
+                                <label for="rut" class="form-label">Profesor</label>
+                                <select class="form-control" id="profesor" name="profesor">
+                                    <option selected>Rut - Nombre</option>
+                                    @foreach ($profesores as $profesores)
+                                        <option value="{{$profesores->rut}}">{{$profesores->rut.' - '.$profesores->nombre.' '.$profesores->apellido}}</option>
+                                    @endforeach
+                                </select>
                             </div>
-                            <div class="col-6">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan">
-                            </div>
-                            <div class="col-6">
-                                <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Vera">
-                            </div>
+                            
                             <div class="col-12">                
-                                <label for="email" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Ej: name@example.com">                            
+                                <label for="comentario" class="form-label">Comentario</label>
+                                <textarea class="form-control" id="comentario" nombre = "comentario" rows="3"></textarea>                            
                             </div>
                             <div class="d-flex justify-content-between">            
                                 <button class="btn btn-secondary" type="reset">Limpiar</button>
@@ -36,7 +35,7 @@
             </div>
         </div>
         <div class="col col-12 col-sm-8 p-3">
-            <h4 class="fw-normal text-center mb-3">Estudiantes Registrados</h4>
+            <h4 class="fw-normal text-center mb-3"></h4>
             <table class="table">
                 <thead>
                   <tr>
@@ -47,14 +46,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($estudiantes as $var=>$estudiantes)
+                    {{-- @foreach ($estudiantes as $var=>$estudiantes)
                     <tr>
                         <td>{{$estudiantes->rut}}</td>
                         <td>{{$estudiantes->nombre}}</td>
                         <td>{{$estudiantes->apellido}}</td>
                         <td>{{$estudiantes->email}}</td>
                     </tr>
-                  @endforeach
+                  @endforeach --}}
                 </tbody>
               </table>
         </div>

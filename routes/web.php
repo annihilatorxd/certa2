@@ -29,7 +29,10 @@ Route::post('/administrador/estudiantes',[AdministradorController::class,'storeE
 Route::get('/administrador/profesor',[AdministradorController::class,'indexProfesor'])->name('administrador.indexProfesor');
 Route::post('/administrador/profesor',[AdministradorController::class,'storeProfesor'])->name('administrador.storeProfesor');
 
+Route::get('/administrador/propuesta',[AdministradorController::class,'propuesta'])->name('administrador.propuesta');
+Route::put('/administrador/propuesta',[AdministradorController::class,'propuestaEstado'])->name('administrador.propuestaEstado');
+
 Route::get('/profesor',[ProfesorController::class,'index'])->name('profesor.indexProfesor');
-Route::post('/profesor',[ProfesorController::class,'comentario'])->name('profesor.comentario');
+Route::get('/profesor/{propuestas}',[ProfesorController::class,'comentario'])->name('profesor.comentario');
 Route::post('/profesorComentario',[ProfesorController::class,'store'])->name('profesor.store');
 

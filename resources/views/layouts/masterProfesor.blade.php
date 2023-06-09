@@ -18,10 +18,7 @@
       <div class="collapse navbar-collapse justify-content-sm-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Propuesta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Estado</a>
+            <a class="nav-link" aria-current="page" href={{route('profesor.indexProfesor')}}>Propuestas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('inicio.index')}}">Cerrar sesión</a>
