@@ -19,7 +19,7 @@
                     <td>{{$propuestas->id}}</td>
                     <td>{{$propuestas->documento}}</td>
                     <td>{{$propuestas->fecha}}</td>
-                    @if($propuestas->estado==0)<td>Esperando Resultado</td>
+                    @if($propuestas->estado==0)<td>En espera</td>
                         @elseif($propuestas->estado==1)<td>Modificar Propuesta</td>
                         @elseif($propuestas->estado==2)<td>Rechazado</td>
                         @elseif($propuestas->estado==3)<td>Aceptado</td>
@@ -29,13 +29,13 @@
                             @csrf
                             @method('PUT')
                             <select class="form-select" name="estado" id="estado">
-                                <option selected>Open this select menu</option>
-                                <option value=0>One</option>
-                                <option value=1>Two</option>
-                                <option value=2>Three</option>
-                                <option value=3>Three</option>
+                                <option selected>Estado revision</option>
+                                <option value=0>Aceptado</option>
+                                <option value=1>Necesita modificaciones</option>
+                                <option value=2>Rechazado</option>
+                                <option value=3>En espera</option>
                             </select>
-                            <button type="submit" class="btn" >0</button></button>
+                            <button type="submit" class="btn btn-primary mt-2" >Enviar</button></button>
                         </form>
 
                     </td>
