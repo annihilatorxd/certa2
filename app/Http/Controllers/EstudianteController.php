@@ -21,12 +21,6 @@ class EstudianteController extends Controller
       $propuestas = Propuesta::all();
       return view('estudiante.estadoEstudiante',compact('estudiantes','propuestas'));
     }
-    public function estadoView(){
-      $files = [];
-      foreach(Storage::disk('local')->files() as $file){
-        
-      }
-    }
     
     public function store(Request $request){
       $propuesta=new Propuesta();

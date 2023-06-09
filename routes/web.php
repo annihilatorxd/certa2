@@ -23,11 +23,13 @@ Route::get('/estudiante',[EstudianteController::class,'index'])->name('estudiant
 Route::get('/estudiante/estado',[EstudianteController::class,'estado'])->name('estudiante.estado');
 Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.store');
 
-Route::get('/administrador',[AdministradorController::class,'index'])->name('administrador.indexAdministrador');
-Route::post('/administrador',[AdministradorController::class,'store'])->name('administrador.store');
-Route::get('/administrador/administradorprofesor',[AdministradorProfesorController::class,'index'])->name('administrador.AdministradorProfesor');
+Route::get('/administrador/estudiantes',[AdministradorController::class,'indexEstudiante'])->name('administrador.indexEstudiante');
+Route::post('/administrador/estudiantes',[AdministradorController::class,'storeEstudiante'])->name('administrador.storeEstudiante');
+
+Route::get('/administrador/administradorprofesor',[AdministradorController::class,'indexProfesor'])->name('administrador.indexProfesor');
+Route::post('/administradorprofesor',[AdministradorController::class,'storeProfesor'])->name('administrador.storeProfesor');
 
 Route::get('/profesor',[ProfesorController::class,'index'])->name('profesor.indexProfesor');
-Route::get('/profesorComentario',[ProfesorController::class,'comentario'])->name('profesor.comentario');
+Route::post('/profesorComentario',[ProfesorController::class,'comentario'])->name('profesor.comentario');
+Route::post('/profesorComentario',[ProfesorController::class,'store'])->name('profesor.store');
 
-Route::post('/administradorprofesor',[AdministradorProfesorController::class,'store'])->name('administradorprofesor.store');

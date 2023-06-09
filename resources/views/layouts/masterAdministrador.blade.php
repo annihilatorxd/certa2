@@ -18,10 +18,10 @@
       <div class="collapse navbar-collapse justify-content-sm-center" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('administrador.indexAdministrador')}}">Estudiantes</a>
+            <a class="nav-link" aria-current="page" href="{{route('administrador.indexEstudiante')}}">Estudiantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Profesores</a>
+            <a class="nav-link" href="{{route('administrador.indexProfesor')}}">Profesores</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">propuestas</a>

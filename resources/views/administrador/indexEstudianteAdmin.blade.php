@@ -1,11 +1,11 @@
-@extends('layouts.masterAdministradorProfesor')
-@section('nav-administradorProfesor')
+@extends('layouts.masterAdministrador')
+@section('nav-administrador')
 <div class="container-fluid">
     <div class="row">
         <div class="col col-12 col-sm-4 p-3">
             <h4 class="fw-normal text-center mb-3">Ingrese Estudiante</h4>
             <div class="card p-3">
-                <form method="POST" action="{{route('administrador.store')}}">
+                <form method="POST" action="{{route('administrador.storeEstudiante')}}">
                     @csrf
                     <div class="container">
                         <div class="row g-3">

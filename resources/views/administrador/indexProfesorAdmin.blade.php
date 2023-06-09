@@ -5,7 +5,7 @@
         <div class="col col-12 col-sm-4 p-3">
             <h4 class="fw-normal text-center mb-3">Ingrese Profesores</h4>
             <div class="card p-3">
-                <form method="POST" action="{{route('administradorprofesor.store')}}">
+                <form method="POST" action="{{route('administrador.storeProfesor')}}">
                     @csrf
                     <div class="container">
                         <div class="row g-3">

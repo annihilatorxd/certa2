@@ -5,7 +5,8 @@
 <div class="container">
     <h1>Seleccionar Profesor</h1>
 
-    <form>
+    <form action="{{route('profesor.comentario')}}" method="POST">
+        @csrf
         <div class="form-group">
             <label for="profesor">Selecciona un profesor:</label>
             <select class="form-control" id="profesor" name="profesor">
@@ -37,7 +38,7 @@
                         <td>{{$propuestas->fecha}}</td>
                         <td>{{$propuestas->estado}}</td>
                         <td>
-                            <a class="btn">Ver</a>
+                            <button class="btn btn-primary" type="submit">ver</button>
                         </td>
                     </tr>
                 @endforeach

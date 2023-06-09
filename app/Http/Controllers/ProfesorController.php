@@ -13,8 +13,14 @@ class ProfesorController extends Controller
         return view('profesor.indexProfesor',compact('profesores','propuestas'));
     
     }
-    public function comentario(){
-        return view('profesor.indexProfesor');
+    public function comentario(Request $request){
+        
+        return view('profesor.comentarioProfesor');
+        
+    }
+    public function store(Request $request){
+        
+        return view('');
         
     }
 }
