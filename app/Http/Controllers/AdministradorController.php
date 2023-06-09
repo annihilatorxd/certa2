@@ -21,7 +21,7 @@ class AdministradorController extends Controller
         $estudiante->email = $request->email;
 
         $estudiante->save();
-        return redirect()->route('administrador.indexEstudianteAdmin');
+        return redirect()->route('administrador.indexEstudiante');
     }
     public function indexProfesor(){
         $profesores = Profesor::all();
@@ -36,6 +36,6 @@ class AdministradorController extends Controller
         
 
         $profesor->save();
-        return redirect()->route('administrador.indexProfesorAdmin.blade'); 
+        return redirect()->route('administrador.indexProfesor'); 
     }
 }

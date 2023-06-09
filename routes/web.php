@@ -26,10 +26,10 @@ Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudian
 Route::get('/administrador/estudiantes',[AdministradorController::class,'indexEstudiante'])->name('administrador.indexEstudiante');
 Route::post('/administrador/estudiantes',[AdministradorController::class,'storeEstudiante'])->name('administrador.storeEstudiante');
 
-Route::get('/administrador/administradorprofesor',[AdministradorController::class,'indexProfesor'])->name('administrador.indexProfesor');
-Route::post('/administradorprofesor',[AdministradorController::class,'storeProfesor'])->name('administrador.storeProfesor');
+Route::get('/administrador/profesor',[AdministradorController::class,'indexProfesor'])->name('administrador.indexProfesor');
+Route::post('/administrador/profesor',[AdministradorController::class,'storeProfesor'])->name('administrador.storeProfesor');
 
 Route::get('/profesor',[ProfesorController::class,'index'])->name('profesor.indexProfesor');
-Route::post('/profesorComentario',[ProfesorController::class,'comentario'])->name('profesor.comentario');
+Route::post('/profesor',[ProfesorController::class,'comentario'])->name('profesor.comentario');
 Route::post('/profesorComentario',[ProfesorController::class,'store'])->name('profesor.store');
 

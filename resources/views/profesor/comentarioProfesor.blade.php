@@ -11,7 +11,7 @@
                     <div class="container">
                         <div class="row g-3">
                             <div class="col-12">
-                                <label for="rut" class="form-label">Rut: {{$request->profesor}}</label>
+                                <label for="rut" class="form-label">Rut:</label>
                             </div>
                             <div class="col-6">
                                 <label for="nombre" class="form-label">Nombre</label>
